@@ -1,7 +1,7 @@
 {
   "outcome": "运行完成，以 delivered_with_failures 交付。37/38组检查通过；470个实际执行用例中468通过、2失败，另2个跳过。独立安装3/3通过，代码体积目标达到，行为验收未通过。剩余失败属于CLI man资源安装。",
   "identity": "tqdm/tqdm @ 9cf5a12 · nanolize 0.8.0 · unattended=on · scope=all · 中文 · 2026-11-15 UTC",
-  "native_report_url": "https://yukang2017.github.io/tqdm-nanolize-all-20261115-report/reports/nrs_265a547e7966c41409df69678e568ded43aa42c567909851e2248b166f94992c/",
+  "native_report_url": "https://yukangchen.com/tqdm-nanolize-all-20261115-report/reports/nrs_265a547e7966c41409df69678e568ded43aa42c567909851e2248b166f94992c/",
   "cards": [
     {
       "label": "最终行为结果",
@@ -93,6 +93,16 @@
           "候选构成",
           "源码20,374 + 配置2,491",
           "目标35,289 tokens（约50%），已达到"
+        ],
+        [
+          "去注释及docstring后比例",
+          "39.94%",
+          "原生code-quality报告的undocumented_retained_percent"
+        ],
+        [
+          "公开定义文档覆盖",
+          "63.3% → 0%",
+          "原生质量报告的描述性指标，不是行为等价证明"
         ],
         [
           "源码物理行",
@@ -412,6 +422,10 @@
     {
       "title": "17. GitHub连接器无新仓库写权限（集成权限现象，非nanolize bug）",
       "detail": "分类：集成权限现象。GitHub连接器向新报告仓库写入返回403 Resource not accessible by integration；改用已成功发布原生报告的本机gh/Git凭据完成汇总页，不修改账户权限。"
+    },
+    {
+      "title": "18. HTTPS已可用但发布状态持续pending（确认的nanolize发布状态兼容缺陷）",
+      "detail": "分类：需要修正nanolize：发布状态兼容。Pages已built且HTTPS匿名访问200、哈希匹配，但API返回HTTP地址，状态工具因只接受HTTPS而持续pending。本次设置新报告仓库https_enforced=true规避；发布器应处理HTTPS配置或安全探测规范地址。"
     }
   ],
   "footer": "结果快照：56fa049516b9b77f4b14556fad64fc7b18e83bb4。任务成本对比未启用。此页仅发布汇总与问题记录，原生报告保留交互功能图。运行服务仍保留；$nanolize stop会停止该用户在机器上的相关服务，并可能暂停其他运行的作业。",

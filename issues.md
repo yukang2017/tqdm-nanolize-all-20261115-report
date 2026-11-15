@@ -101,3 +101,10 @@
 - 错误：GitHub API error 403: Resource not accessible by integration。
 - 原因：连接器不能向新公开报告仓库写文件；与本机gh登录的权限不同。
 - 处理：使用此前已成功发布原生报告的本机gh/Git凭据，在同一gh-pages分支添加汇总与问题文件，不改变仓库可见性或账户权限。
+
+## 18. HTTPS已可用但发布状态持续pending（确认的nanolize发布状态兼容缺陷）
+- 阶段：匿名发布验证；job：ac3103d50e924f80bcee05809c8fe140。
+- 证据：GitHub Pages已built，API的html_url为http://自定义域名路径；nanolize的_verify_url对非https直接返回false，状态持续pending且不提供公开URL。实际HTTPS匿名GET为200，报告SHA256与本地完全一致。
+- 原因：发布器建立站点后未处理“HTTP元数据地址但HTTPS已可用”的情况，也未自动完成本次新报告站点的HTTPS配置。
+- 设置规避：只对本次新建报告仓库Pages设置https_enforced=true，API地址随即改为HTTPS，状态工具开始提供正确expected_url；等待本次汇总提交的部署完成后再次验证。
+- 建议nanolize在发布流程中处理HTTPS配置或安全探测可用的HTTPS规范地址，不应把已经可验证的报告永久留在pending。没有改插件代码或全局自定义域名。
