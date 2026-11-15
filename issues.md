@@ -94,7 +94,7 @@
 - 阶段：公开发布；job：ac3103d50e924f80bcee05809c8fe140。
 - 错误：GitHub report request failed; check gh login and repository permissions。
 - 检查发现登录与读取权限正常，公开仓库已建立。使用publish_report_site对同一安全站点重试，无需改凭据、权限或插件代码，返回pending部署状态。
-- 分类：尚无证据证明权限不足或nanolize确定性缺陷；可能是外部API或新建资源时序问题，不能下定论。继续匿名访问验证。
+- 分类：尚无证据证明权限不足或nanolize确定性缺陷；可能是外部API或新建资源时序问题，不能下定论。后续已通过匿名访问与报告哈希验证，报告状态为published。
 
 ## 17. GitHub连接器无新仓库写权限（集成权限现象，非nanolize bug）
 - 阶段：中文汇总页发布；job：ac3103d50e924f80bcee05809c8fe140。
@@ -106,5 +106,12 @@
 - 阶段：匿名发布验证；job：ac3103d50e924f80bcee05809c8fe140。
 - 证据：GitHub Pages已built，API的html_url为http://自定义域名路径；nanolize的_verify_url对非https直接返回false，状态持续pending且不提供公开URL。实际HTTPS匿名GET为200，报告SHA256与本地完全一致。
 - 原因：发布器建立站点后未处理“HTTP元数据地址但HTTPS已可用”的情况，也未自动完成本次新报告站点的HTTPS配置。
-- 设置规避：只对本次新建报告仓库Pages设置https_enforced=true，API地址随即改为HTTPS，状态工具开始提供正确expected_url；等待本次汇总提交的部署完成后再次验证。
+- 设置规避：只对本次新建报告仓库Pages设置https_enforced=true，API地址随即改为HTTPS，状态工具开始提供正确expected_url；部署完成后状态工具已返回published，anonymous_access_verified=true；HTTPS报告哈希与本地完全一致。
 - 建议nanolize在发布流程中处理HTTPS配置或安全探测可用的HTTPS规范地址，不应把已经可验证的报告永久留在pending。没有改插件代码或全局自定义域名。
+
+## 19. 浏览器验证环境缺少动态库（环境现象，非nanolize bug）
+- 阶段：公开页面视觉验证；job：ac3103d50e924f80bcee05809c8fe140。
+- Chromium首次启动失败：libnspr4.so、libnss3.so、libnssutil3.so缺失；系统APT包索引也未准备，初次download无法定位包。
+- 处理：在/tmp下建立浏览器专用包索引、缓存和库目录，下载解包依赖，启动时仅为该进程设置库路径；不改系统安装或全局配置。另在临时目录解包中文字体。最终桌面1440×1000与手机390×844的原生功能图、中文汇总均通过视觉及交互检查，0个JavaScript错误、无页面横向溢出。
+
+- 浏览器观察脚本曾按可见文字定位节点，但实际ARIA名称带Inspect前缀，导致一次定位超时；按正确ARIA标签重跑后通过。这属于观察脚本问题，非页面交互故障。

@@ -426,6 +426,10 @@
     {
       "title": "18. HTTPS已可用但发布状态持续pending（确认的nanolize发布状态兼容缺陷）",
       "detail": "分类：需要修正nanolize：发布状态兼容。Pages已built且HTTPS匿名访问200、哈希匹配，但API返回HTTP地址，状态工具因只接受HTTPS而持续pending。本次设置新报告仓库https_enforced=true规避；发布器应处理HTTPS配置或安全探测规范地址。"
+    },
+    {
+      "title": "19. 浏览器验证环境缺少动态库（环境现象，非nanolize bug）",
+      "detail": "分类：浏览器环境现象。视觉验证首次因缺少NSS/NSPR动态库而失败，APT索引也未就绪；在/tmp中建立独立索引、解包动态库并只为验证进程设置库路径，不修改系统安装。"
     }
   ],
   "footer": "结果快照：56fa049516b9b77f4b14556fad64fc7b18e83bb4。任务成本对比未启用。此页仅发布汇总与问题记录，原生报告保留交互功能图。运行服务仍保留；$nanolize stop会停止该用户在机器上的相关服务，并可能暂停其他运行的作业。",
