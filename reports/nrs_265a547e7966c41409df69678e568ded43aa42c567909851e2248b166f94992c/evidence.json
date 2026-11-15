@@ -1,0 +1,1227 @@
+{
+  "limitations": [
+    "Only summary results are published; captured command output is omitted."
+  ],
+  "status": "regressed",
+  "tests": {
+    "original_total": 14,
+    "retained": 38,
+    "retired": 0,
+    "needs_adaptation": 0,
+    "adapted": 0,
+    "contract": 24,
+    "passed": 37,
+    "failed": 1,
+    "fixed_baseline_failure": 0,
+    "not_run": 0
+  },
+  "capability_results": [
+    {
+      "id": "progress",
+      "status": "regressed",
+      "checks": [],
+      "check_status": "regressed",
+      "baseline_status": "not_run",
+      "candidate_status": "not_run"
+    },
+    {
+      "id": "core",
+      "status": "passed",
+      "checks": [
+        "pytest-pandas",
+        "pytest-perf",
+        "public-iteration-output"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "terminal",
+      "status": "passed",
+      "checks": [
+        "pytest-utils",
+        "contract-terminal-ac3103-21",
+        "contract-terminal-ac3103-22"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "monitor",
+      "status": "passed",
+      "checks": [
+        "pytest-rlock",
+        "contract-monitor-ac3103-16"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "api",
+      "status": "passed",
+      "checks": [
+        "pytest-version",
+        "public-iteration-output",
+        "contract-api-ac3103-1",
+        "contract-api-ac3103-2"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "cli",
+      "status": "regressed",
+      "checks": [
+        "contract-cli-ac3103-6",
+        "contract-cli-ac3103-7",
+        "contract-cli-ac3103-8"
+      ],
+      "check_status": "regressed",
+      "baseline_status": "passed",
+      "candidate_status": "failed"
+    },
+    {
+      "id": "async",
+      "status": "passed",
+      "checks": [
+        "pytest-asyncio"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "notebook",
+      "status": "passed",
+      "checks": [
+        "pytest-notebook"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "auto",
+      "status": "passed",
+      "checks": [
+        "contract-auto-ac3103-3"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "gui",
+      "status": "passed",
+      "checks": [
+        "pytest-gui"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "tk",
+      "status": "passed",
+      "checks": [
+        "pytest-tk"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "rich",
+      "status": "passed",
+      "checks": [
+        "pytest-rich"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "iterables",
+      "status": "passed",
+      "checks": [
+        "pytest-contrib",
+        "pytest-itertools"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "parallel",
+      "status": "passed",
+      "checks": [
+        "contract-parallel-ac3103-17",
+        "contract-parallel-ac3103-18",
+        "contract-parallel-ac3103-19"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "logging",
+      "status": "passed",
+      "checks": [
+        "contract-logging-ac3103-14",
+        "contract-logging-ac3103-15"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "dask",
+      "status": "passed",
+      "checks": [
+        "pytest-dask"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "keras",
+      "status": "passed",
+      "checks": [
+        "pytest-keras",
+        "contract-keras-ac3103-12",
+        "contract-keras-ac3103-13"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "worker",
+      "status": "passed",
+      "checks": [
+        "contract-worker-ac3103-27"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "slack",
+      "status": "passed",
+      "checks": [
+        "contract-slack-ac3103-19",
+        "contract-slack-ac3103-20"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "discord",
+      "status": "unverified",
+      "checks": [],
+      "check_status": "unverified",
+      "baseline_status": "not_run",
+      "candidate_status": "not_run"
+    },
+    {
+      "id": "telegram",
+      "status": "unverified",
+      "checks": [],
+      "check_status": "unverified",
+      "baseline_status": "not_run",
+      "candidate_status": "not_run"
+    },
+    {
+      "id": "bells",
+      "status": "passed",
+      "checks": [
+        "contract-bells-ac3103-4",
+        "contract-bells-ac3103-5"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "examples",
+      "status": "unverified",
+      "checks": [
+        "contract-examples-ac3103-20"
+      ],
+      "check_status": "unverified",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    },
+    {
+      "id": "release",
+      "status": "passed",
+      "checks": [
+        "contract-release-ac3103-20"
+      ],
+      "check_status": "passed",
+      "baseline_status": "passed",
+      "candidate_status": "passed"
+    }
+  ],
+  "checks": [
+    {
+      "name": "pytest-pandas",
+      "status": "passed",
+      "role": "original",
+      "scope": "retained",
+      "capabilities": [
+        "core"
+      ]
+    },
+    {
+      "name": "pytest-perf",
+      "status": "passed",
+      "role": "original",
+      "scope": "retained",
+      "capabilities": [
+        "core"
+      ]
+    },
+    {
+      "name": "pytest-utils",
+      "status": "passed",
+      "role": "original",
+      "scope": "retained",
+      "capabilities": [
+        "terminal"
+      ]
+    },
+    {
+      "name": "pytest-rlock",
+      "status": "passed",
+      "role": "original",
+      "scope": "retained",
+      "capabilities": [
+        "monitor"
+      ]
+    },
+    {
+      "name": "pytest-version",
+      "status": "passed",
+      "role": "original",
+      "scope": "retained",
+      "capabilities": [
+        "api"
+      ]
+    },
+    {
+      "name": "pytest-asyncio",
+      "status": "passed",
+      "role": "original",
+      "scope": "retained",
+      "capabilities": [
+        "async"
+      ]
+    },
+    {
+      "name": "pytest-notebook",
+      "status": "passed",
+      "role": "original",
+      "scope": "retained",
+      "capabilities": [
+        "notebook"
+      ]
+    },
+    {
+      "name": "pytest-gui",
+      "status": "passed",
+      "role": "original",
+      "scope": "retained",
+      "capabilities": [
+        "gui"
+      ]
+    },
+    {
+      "name": "pytest-tk",
+      "status": "passed",
+      "role": "original",
+      "scope": "retained",
+      "capabilities": [
+        "tk"
+      ]
+    },
+    {
+      "name": "pytest-rich",
+      "status": "passed",
+      "role": "original",
+      "scope": "retained",
+      "capabilities": [
+        "rich"
+      ]
+    },
+    {
+      "name": "pytest-contrib",
+      "status": "passed",
+      "role": "original",
+      "scope": "retained",
+      "capabilities": [
+        "iterables"
+      ]
+    },
+    {
+      "name": "pytest-itertools",
+      "status": "passed",
+      "role": "original",
+      "scope": "retained",
+      "capabilities": [
+        "iterables"
+      ]
+    },
+    {
+      "name": "pytest-dask",
+      "status": "passed",
+      "role": "original",
+      "scope": "retained",
+      "capabilities": [
+        "dask"
+      ]
+    },
+    {
+      "name": "pytest-keras",
+      "status": "passed",
+      "role": "original",
+      "scope": "retained",
+      "capabilities": [
+        "keras"
+      ]
+    },
+    {
+      "name": "public-iteration-output",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "core",
+        "api"
+      ]
+    },
+    {
+      "name": "contract-api-ac3103-1",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "api"
+      ]
+    },
+    {
+      "name": "contract-api-ac3103-2",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "api"
+      ]
+    },
+    {
+      "name": "contract-auto-ac3103-3",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "auto"
+      ]
+    },
+    {
+      "name": "contract-bells-ac3103-4",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "bells"
+      ]
+    },
+    {
+      "name": "contract-bells-ac3103-5",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "bells"
+      ]
+    },
+    {
+      "name": "contract-cli-ac3103-6",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "cli"
+      ]
+    },
+    {
+      "name": "contract-cli-ac3103-7",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "cli"
+      ]
+    },
+    {
+      "name": "contract-cli-ac3103-8",
+      "status": "regressed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "cli"
+      ]
+    },
+    {
+      "name": "contract-keras-ac3103-12",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "keras"
+      ]
+    },
+    {
+      "name": "contract-keras-ac3103-13",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "keras"
+      ]
+    },
+    {
+      "name": "contract-logging-ac3103-14",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "logging"
+      ]
+    },
+    {
+      "name": "contract-logging-ac3103-15",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "logging"
+      ]
+    },
+    {
+      "name": "contract-monitor-ac3103-16",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "monitor"
+      ]
+    },
+    {
+      "name": "contract-parallel-ac3103-17",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "parallel"
+      ]
+    },
+    {
+      "name": "contract-parallel-ac3103-18",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "parallel"
+      ]
+    },
+    {
+      "name": "contract-parallel-ac3103-19",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "parallel"
+      ]
+    },
+    {
+      "name": "contract-release-ac3103-20",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "release"
+      ]
+    },
+    {
+      "name": "contract-worker-ac3103-27",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "worker"
+      ]
+    },
+    {
+      "name": "contract-slack-ac3103-19",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "slack"
+      ]
+    },
+    {
+      "name": "contract-slack-ac3103-20",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "slack"
+      ]
+    },
+    {
+      "name": "contract-examples-ac3103-20",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "examples"
+      ]
+    },
+    {
+      "name": "contract-terminal-ac3103-21",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "terminal"
+      ]
+    },
+    {
+      "name": "contract-terminal-ac3103-22",
+      "status": "passed",
+      "role": "contract",
+      "scope": "retained",
+      "capabilities": [
+        "terminal"
+      ]
+    }
+  ],
+  "actual_size": {
+    "baseline_source_lines": 5608,
+    "source_lines": 2442,
+    "source_files": 36,
+    "retained_percent": 32.39632185210898,
+    "target_percent": 50.0,
+    "target_source_lines": 2804.0,
+    "estimated_source_lines": null,
+    "metric": "tokens",
+    "tokenizer": {
+      "classification": "source_and_configuration_v2",
+      "decoding": "python_encoding_cookie_else_utf8_strict",
+      "encoding": "cl100k_base",
+      "exclusion_policy": "unchanged_original_tests_documentation_launcher_configuration_binary_assets",
+      "file_boundaries": "independent_sum",
+      "library": "tiktoken",
+      "ranks_sha256": "223921b76ee99bde995b7ff738513eef100fb51d18c93597a113bcffe865b2a7",
+      "special_tokens": "ordinary_text",
+      "text_policy": "raw_decoded_text_per_file",
+      "version": "0.12.0"
+    },
+    "measurement_sha256": "1046e74a631d03b9f2ce648c494090111e1d71ae276653e3a17f5b989fe305d5",
+    "source_tokens": 20374,
+    "configuration_tokens": 2491,
+    "total_tokens": 22865,
+    "baseline_tokens": 70579,
+    "target_tokens": 35289,
+    "source_retained_percent": 43.54493580599144,
+    "complete": true,
+    "target_met": true
+  },
+  "budget_status": "met",
+  "verification_scope": "full",
+  "rewrite_progress": {
+    "priority": "functionality_first",
+    "author_attempts": 6,
+    "repair_attempts": 4,
+    "optimization_attempts": 0,
+    "restorations": 1,
+    "rejected_attempts": 0,
+    "failed_optimizations": 0,
+    "max_optimization_attempts": 3,
+    "stop_reason": "controller_stopped",
+    "accepted_candidate_available": false,
+    "behavior_acceptance": "not_established",
+    "size_acceptance": "met"
+  },
+  "installation_evidence": {
+    "status": "passed",
+    "checks_passed": 3,
+    "checks_total": 3,
+    "environment_metadata_complete": true
+  },
+  "obligation_ledger": {
+    "records": [
+      {
+        "capability": "progress",
+        "status": "failed",
+        "obligations": [
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "failed",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "unknown",
+            "kind": "retained_child"
+          },
+          {
+            "status": "partial",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "unknown",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          },
+          {
+            "status": "verified",
+            "kind": "retained_child"
+          }
+        ]
+      },
+      {
+        "capability": "core",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "pytest-pandas",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "pytest-perf",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "public-iteration-output",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "terminal",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "pytest-utils",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "contract-terminal-ac3103-21",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "contract-terminal-ac3103-22",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "monitor",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "pytest-rlock",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "contract-monitor-ac3103-16",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "api",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "pytest-version",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "public-iteration-output",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "contract-api-ac3103-1",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "contract-api-ac3103-2",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "cli",
+        "status": "failed",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "contract-cli-ac3103-6",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "contract-cli-ac3103-7",
+            "kind": "declared_check"
+          },
+          {
+            "status": "failed",
+            "check": "contract-cli-ac3103-8",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "async",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "pytest-asyncio",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "notebook",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "pytest-notebook",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "auto",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "contract-auto-ac3103-3",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "gui",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "pytest-gui",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "tk",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "pytest-tk",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "rich",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "pytest-rich",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "iterables",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "pytest-contrib",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "pytest-itertools",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "parallel",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "contract-parallel-ac3103-17",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "contract-parallel-ac3103-18",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "contract-parallel-ac3103-19",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "logging",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "contract-logging-ac3103-14",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "contract-logging-ac3103-15",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "dask",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "pytest-dask",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "keras",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "pytest-keras",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "contract-keras-ac3103-12",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "contract-keras-ac3103-13",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "worker",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "contract-worker-ac3103-27",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "slack",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "contract-slack-ac3103-19",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "contract-slack-ac3103-20",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "discord",
+        "status": "unknown",
+        "obligations": [
+          {
+            "status": "unknown",
+            "kind": "coverage"
+          }
+        ]
+      },
+      {
+        "capability": "telegram",
+        "status": "unknown",
+        "obligations": [
+          {
+            "status": "unknown",
+            "kind": "coverage"
+          }
+        ]
+      },
+      {
+        "capability": "bells",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "contract-bells-ac3103-4",
+            "kind": "declared_check"
+          },
+          {
+            "status": "verified",
+            "check": "contract-bells-ac3103-5",
+            "kind": "declared_check"
+          }
+        ]
+      },
+      {
+        "capability": "examples",
+        "status": "partial",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "contract-examples-ac3103-20",
+            "kind": "declared_check"
+          },
+          {
+            "status": "unknown",
+            "kind": "coverage"
+          }
+        ]
+      },
+      {
+        "capability": "release",
+        "status": "verified",
+        "obligations": [
+          {
+            "status": "verified",
+            "check": "contract-release-ac3103-20",
+            "kind": "declared_check"
+          }
+        ]
+      }
+    ],
+    "summary": {
+      "unknown": 2,
+      "verified": 19,
+      "partial": 1,
+      "retired": 0,
+      "failed": 2,
+      "total": 24,
+      "retained": 24,
+      "complete": false
+    },
+    "limitations": [
+      "Public summaries omit private evidence bindings and raw output."
+    ]
+  },
+  "leaf_coverage": {
+    "status": "ready",
+    "strict": false,
+    "valid": [
+      "api",
+      "async",
+      "auto",
+      "bells",
+      "cli",
+      "core",
+      "dask",
+      "iterables",
+      "keras",
+      "logging",
+      "monitor",
+      "notebook",
+      "parallel",
+      "release",
+      "rich",
+      "slack",
+      "worker"
+    ],
+    "missing": [
+      "discord",
+      "examples",
+      "gui",
+      "telegram",
+      "terminal",
+      "tk"
+    ],
+    "exempted": [],
+    "why_missing": {
+      "discord": [
+        "no_check"
+      ],
+      "examples": [
+        "pinned_without_knockout_evidence"
+      ],
+      "gui": [
+        "no_behavioral_knockout_failure"
+      ],
+      "telegram": [
+        "no_check"
+      ],
+      "terminal": [
+        "no_behavioral_knockout_failure",
+        "pinned_without_knockout_evidence"
+      ],
+      "tk": [
+        "no_behavioral_knockout_failure"
+      ]
+    }
+  },
+  "task_effort": {
+    "schema_version": 1,
+    "operation": "task_effort_evaluation",
+    "status": "disabled",
+    "binding": {},
+    "policy": {
+      "comparison": "empirical_range",
+      "strict_all_tasks": true
+    },
+    "task_types": [
+      "understand",
+      "diagnose",
+      "modify",
+      "execute"
+    ],
+    "tasks": [],
+    "overhead": {
+      "examiner_tokens": null,
+      "judge_tokens": null,
+      "solver_tokens": null,
+      "total_tokens": null,
+      "usage_complete": false,
+      "observed_total_tokens": null,
+      "role_usage_complete": {
+        "examiner": false,
+        "solver": false,
+        "judge": false
+      }
+    },
+    "resources": {
+      "completed_runs": 0,
+      "cleanup_pending": false,
+      "cleanup_pending_runs": 0
+    },
+    "iterations": [],
+    "limitations": [
+      "Task effort measures these tasks under the recorded agent settings; it is not a universal measure of human cognitive burden.",
+      "Tokens count solver model inputs and outputs, including cached input. Missing usage is unavailable, never zero. Examiner and judge overhead is separate.",
+      "Empirical ranges describe repeated observations, not statistical confidence intervals. Failed or unrun tasks do not establish an improvement.",
+      "Task links identify assessed capabilities only; they do not change module behavior verification badges.",
+      "Task prompts, hidden inputs, judging rubrics, source excerpts, raw traces and local paths are omitted from this public report."
+    ],
+    "stop_reason": "owner_disabled"
+  }
+}
